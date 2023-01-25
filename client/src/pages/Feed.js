@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Feed = () => {
   return (
     <div>
-        <Link to="/api/feed">feed page</Link>
+        <Link to="/feed">feed page</Link>
         Feed</div>
   )
 }

@@ -42,7 +42,7 @@ const AvailableVechiles = (props) => {
                   </div>
                  </div>
 
-                <Link to={`/api/search/details/${i._id}`}> <button className="btn btn-primary">Get details</button></Link>
+                <Link to={`/search/details/${i._id}`}> <button className="btn btn-primary">Get details</button></Link>
                  
 
                 </div>

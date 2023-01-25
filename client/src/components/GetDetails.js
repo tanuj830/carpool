@@ -15,7 +15,7 @@ const GetDetails = () => {
 
     useEffect(() => {
 
-        axios.get(`/api/search/details/${id}`).then(res=>setData(res.data)).catch(err=>console.log(err))
+        axios.get(`http://localhost:8000/search/details/${id}`).then(res=>setData(res.data)).catch(err=>console.log(err))
 
        
     }, [])

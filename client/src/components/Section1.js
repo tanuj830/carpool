@@ -17,8 +17,8 @@ const Section1 = () => {
   return (
     <div className=''>
      <img className='s1-img1 img-fluid' src="https://sride.co/wp-content/uploads/2019/06/sRide-Carpool-Bikepool-Ride-Sharing-Office-Ride-.svg" alt="" />
-        <div className='s1-div1 container d-flex justify-content-center'>
-            <div className='row'>
+        <div className=' container d-flex justify-content-center'>
+            <div className='row mt-5'>
                 <div className='col'>
                
 
@@ -27,12 +27,12 @@ const Section1 = () => {
                 </div>
                 {
                   user === "true" ? <div className='col'>
-                  <h2>Enjoy rides and/or add your vehicle now,</h2>
-                  <button className='button mt-2'><Link to="/api/search" className="text-decoration-none text-dark">Explore carpool</Link></button>
+                  <h2 className='lead fs-4'>Enjoy rides and/or add your vehicle now,</h2>
+                  <button className='button mt-2'><Link to="/search" className="text-decoration-none text-dark lead fs-6">Explore carpool</Link></button>
                   </div> 
                   : <div className='col'>
                   <h2>Enjoy rides and/or add your vehicle now,</h2>
-                  <button className='button mt-2'><Link to="/api/signin" className="text-decoration-none text-dark">Explore carpool now</Link></button>
+                  <button className='button mt-2'><Link to="/signin" className="text-decoration-none text-dark">Explore carpool now</Link></button>
                   </div> 
                 }
             </div>

@@ -4,9 +4,8 @@
   "description": "backend",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-   "heroku-postbuild": "cd client && npm install && npm run build"
-  },
+    "start": "nodemon server.js"
+    },
   "author": "Tanuj Bhatt",
   "license": "ISC",
   "dependencies": {

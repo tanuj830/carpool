@@ -3,7 +3,7 @@ const router = express.Router()
 const UserSchema = require("../models/UserModel")
 
 // Validating user
-router.post("/api/signin",async(req,res)=>{
+router.post("/signin",async(req,res)=>{
 
     try{
 
@@ -23,7 +23,7 @@ router.post("/api/signin",async(req,res)=>{
 
 
 //Adding user
-router.post("/api/signin/register",async(req,res)=>{
+router.post("/signin/register",async(req,res)=>{
 
 try{
     
@@ -51,7 +51,7 @@ try{
 
 
 
-router.get("/api/signin/:id",(req,res)=>{
+router.get("/signin/:id",(req,res)=>{
     
     try{  
         // const id = req.params.id
@@ -67,7 +67,7 @@ router.get("/api/signin/:id",(req,res)=>{
 
 })
 
-router.get("/api/signin",(req,res)=>{
+router.get("/signin",(req,res)=>{
     
     try{  
         // const id = req.params.id

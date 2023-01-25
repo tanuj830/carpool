@@ -18,7 +18,7 @@ const SettingComponent = () => {
 useEffect(() => {
   
   var userid = JSON.parse(window.localStorage.getItem("userid"))
-  axios.get("/api/settings/data",{params:
+  axios.get("http://localhost:8000/settings/data",{params:
 {
   id: userid
 }})
@@ -57,7 +57,7 @@ const handleSubmit = (file) =>{
     }
   );
 const id = JSON.parse(window.localStorage.getItem("userid"))
-    axios.put(`/api/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
+    axios.put(`http://localhost:8000/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
 }
 
 

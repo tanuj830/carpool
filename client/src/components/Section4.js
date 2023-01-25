@@ -11,7 +11,7 @@ const Section4 = () => {
 
 useEffect(() => {
   
-    axios.get("/api/signin").then(res=>setResult(res.data)).catch(err=>console.log(err)) // it has info of user who wrote that and review
+    axios.get("http://localhost:8000/signin").then(res=>setResult(res.data)).catch(err=>console.log(err)) // it has info of user who wrote that and review
     
 }, [])
 
@@ -20,7 +20,7 @@ const handleSubmit=(e)=>{
 
     const id = JSON.parse(window.localStorage.getItem("userid"))
     
-    axios.put(`/${id}`,data).then(res=>console.log(res.data)).catch(err=>console.log(err))// review added string coming as a response
+    axios.put(`http://localhost:8000/${id}`,data).then(res=>console.log(res.data)).catch(err=>console.log(err))// review added string coming as a response
 window.location.reload()
   }
 
@@ -32,8 +32,8 @@ const handleChange=(e)=>{
 }
 // console.log(Result)
   return (
-    <div className='container-fluid' style={{marginBottom:300}}>
-    <hr />
+    <div className='container-fluid' style={{marginBottom:30}}>
+  
         <div className='my-5'>
         <div className='row'>
 <div className='text-center'>

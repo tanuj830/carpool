@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 const Section3 = () => {
 
     return (
-        <div className='container p-5' style={{marginTop:200,marginBottom:280,backgroundColor:"#F8F8F8", borderRadius:5}}>
+        <div className='container p-5 my-5' style={{backgroundColor:"#F8F8F8", borderRadius:5}}>
 
 <div className='row mb-5'>
 <div className='col text-center'>

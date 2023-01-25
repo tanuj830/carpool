@@ -21,7 +21,7 @@ const Navigate = useNavigate();
 const handleSubmit=(e)=>{
   e.preventDefault()
 
-  axios.post("/api/signin/register", data).then(res=>setNavigate(res.data)).catch(err=>console.log(err))
+  axios.post("http://localhost:8000/signin/register", data).then(res=>setNavigate(res.data)).catch(err=>console.log(err))
 
 //  window.location.reload()
 }

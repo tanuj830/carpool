@@ -13,7 +13,7 @@ const Signin = () => {
     const [result, setResult] = React.useState({})
     const handleSubmit = (e) =>{ 
         e.preventDefault();
-        axios.post("/api/signin",userInfo).then(res=> setResult(res.data)).catch(err=>(console.log(err)))
+        axios.post("http://localhost:8000/signin",userInfo).then(res=> setResult(res.data)).catch(err=>(console.log(err)))
         setwrongCredentialsUtil("true")
 
 }
@@ -65,7 +65,7 @@ useEffect(() => {
                 <button className='btn btn-primary'> Submit </button>
             </div>
                <div>
-               <Link to="/api/signin/register">create account </Link>
+               <Link to="/signin/register">create account </Link>
                </div>
         </form>
   </div>

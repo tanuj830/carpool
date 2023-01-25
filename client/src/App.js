@@ -36,13 +36,13 @@ function App() {
      <Router>
       <Routes>
         <Route path="/" exact element={<Home/>} />
-        <Route path="/api/feed" element={<Feed/>} />
-        {user === "true"? <Route path="/api/addvechile" element={<AddVechile/>} /> : null }
-        {user === "true" ? <Route path="/api/search"  element={<WantRide/>} /> : null}
-        {user === "true" ? <Route path="/api/search/details/:id" element={<GetDetails/>} /> : null}
-        {user === "true" ? <Route path="/api/settings" element={<Settings/>} /> : null}
-        <Route path="/api/signin" element={<Signin/>} />
-        <Route path="/api/signin/register" element={<Register/>} />
+        <Route path="/feed" element={<Feed/>} />
+        {user === "true"? <Route path="/addvechile" element={<AddVechile/>} /> : null }
+        {user === "true" ? <Route path="/search"  element={<WantRide/>} /> : null}
+        {user === "true" ? <Route path="/search/details/:id" element={<GetDetails/>} /> : null}
+        {user === "true" ? <Route path="/settings" element={<Settings/>} /> : null}
+        <Route path="/signin" element={<Signin/>} />
+        <Route path="/signin/register" element={<Register/>} />
         
         <Route path="*" element = {<Error404/>}/>
       </Routes>
