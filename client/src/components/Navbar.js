@@ -128,8 +128,8 @@ const Navbar = () => {
            <span>
              <ul className="navbar-nav">
                <li className="navbar-item" style={{marginRight:2}}>
-               <Link className="text-decoration-none" to="/aboutus">
-        <h1 className="lead fs-5 text-">About</h1>
+               <Link  className="text-decoration-none" to="/aboutus">
+        <h1 className="lead fs-5 text-"><u className="mt-5">About</u></h1>
         </Link>
                </li>
                <li className="navbar-item mx-2">

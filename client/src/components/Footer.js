@@ -19,7 +19,7 @@ const Footer = () => {
           <div>
             <h3 className='lead fs-6 text-muted'>Social Link</h3>
           </div>
-          <Link to="https://github.com/tanuj830/carpool" className='text-dark hover:bg-danger'><BsGithub /></Link>
+          <a href="https://github.com/tanuj830/carpool" className='text-dark hover:bg-danger'><BsGithub /></a>
         </div>
       </div>
       <small className='py-2'>© 2022 Carpool</small>
