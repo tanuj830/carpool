@@ -1,0 +1,12 @@
+.add-icon{
+    cursor: pointer;
+    /* size: 1px; */
+}
+.add-icon:hover{
+    color: blue;
+}
+.textinput{
+    border: none;
+width: 40%;
+    border-bottom: solid black 1px;
+}
