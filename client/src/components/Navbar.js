@@ -129,7 +129,7 @@ const Navbar = () => {
              <ul className="navbar-nav">
                <li className="navbar-item" style={{marginRight:2}}>
                <Link  className="text-decoration-none" to="/aboutus">
-        
+        <h1 className="lead fs-5 text-">About</h1>
         </Link>
                </li>
                <li className="navbar-item mx-2">
