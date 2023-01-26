@@ -108,7 +108,14 @@ const Navbar = () => {
        <div className="container">
       
 
-
+        
+         <button
+          className="ms-auto navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#id1"
+        >
+           <span className="navbar-toggler-icon"></span>
+        </button>
        <div
            className=" collapse navbar-collapse d-flex justify-content-between align-items-center"
            
