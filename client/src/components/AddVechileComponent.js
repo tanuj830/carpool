@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 const AddVechileComponent = () => {
 
-  const [data, setData] = React.useState()
+  const [data, setData] = React.useState({})
   const [user, setUser] = React.useState()
   const [userData, setUserData] = React.useState({})
   const [vechileID, setVechileID] = React.useState()
@@ -25,17 +25,17 @@ const AddVechileComponent = () => {
 
     e.preventDefault()
 
-axios.post("/addvechile",data).then(res=>setVechileID(res)).catch((err)=>console.log(err))// 1
-
+axios.post("http://localhost:8000/addvechile",data).then(res=>setVechileID(res)).catch((err)=>console.log(err))// 1
+// console.log(data)
 
 
 // updating vechile schema
-axios.put(`/addvechile/${vechileID.data}`, userData).then(res=>console.log(res.data)).catch(err=>console.log(err)) //2
+axios.put(`http://localhost:8000/addvechile/${vechileID.data}`, userData).then(res=>console.log(res.data)).catch(err=>console.log(err)) //2
 console.log("end")
 
 
 
-window.location.reload()
+// window.location.reload()
   }
 
   

@@ -16,7 +16,6 @@ const Section1 = () => {
 
   return (
     <div className=''>
-     <img className='s1-img1 img-fluid' src="https://sride.co/wp-content/uploads/2019/06/sRide-Carpool-Bikepool-Ride-Sharing-Office-Ride-.svg" alt="" />
         <div className=' container d-flex justify-content-center'>
             <div className='row mt-5'>
                 <div className='col'>
@@ -39,6 +38,7 @@ const Section1 = () => {
         </div>
           {/* svg */}
        
+          <img className='s1-img1 img-fluid' src="https://sride.co/wp-content/uploads/2019/06/sRide-Carpool-Bikepool-Ride-Sharing-Office-Ride-.svg" alt="" />
 
     </div>
   )
