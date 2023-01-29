@@ -35,7 +35,7 @@ console.log("end")
 
 
 
-// window.location.reload()
+window.location.href = "/"
   }
 
   
