@@ -19,7 +19,7 @@ const WantRideComponent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get("https://carpool-dhfy.onrender.comsearch", {
+      .get("https://carpool-dhfy.onrender.com/search", {
         params: {
           source: `${data.source}`,
           des: `${data.des}`,

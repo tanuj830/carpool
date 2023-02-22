@@ -13,7 +13,7 @@ const Signin = () => {
     const [result, setResult] = React.useState({})
     const handleSubmit = (e) =>{ 
         e.preventDefault();
-        axios.post("https://carpool-dhfy.onrender.comsignin",userInfo).then(res=> setResult(res.data)).catch(err=>(console.log(err)))
+        axios.post("https://carpool-dhfy.onrender.com/signin",userInfo).then(res=> setResult(res.data)).catch(err=>(console.log(err)))
         setwrongCredentialsUtil("true")
 
 }

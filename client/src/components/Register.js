@@ -21,7 +21,7 @@ const Navigate = useNavigate();
 const handleSubmit=(e)=>{
   e.preventDefault()
 
-  axios.post("https://carpool-dhfy.onrender.comsignin/register", data).then(res=>setNavigate(res.data)).catch(err=>console.log(err))
+  axios.post("https://carpool-dhfy.onrender.com/signin/register", data).then(res=>setNavigate(res.data)).catch(err=>console.log(err))
 
 //  window.location.reload()
 }

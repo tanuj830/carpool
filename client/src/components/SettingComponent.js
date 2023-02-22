@@ -18,7 +18,7 @@ const SettingComponent = () => {
 useEffect(() => {
   
   var userid = JSON.parse(window.localStorage.getItem("userid"))
-  axios.get("https://carpool-dhfy.onrender.comsettings/data",{params:
+  axios.get("https://carpool-dhfy.onrender.com/settings/data",{params:
 {
   id: userid
 }})
@@ -57,7 +57,7 @@ const handleSubmit = (file) =>{
     }
   );
 const id = JSON.parse(window.localStorage.getItem("userid"))
-    axios.put(`https://carpool-dhfy.onrender.comsettings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
+    axios.put(`https://carpool-dhfy.onrender.com/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
 }
 
 

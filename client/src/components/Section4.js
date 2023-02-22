@@ -11,7 +11,7 @@ const Section4 = () => {
 
 useEffect(() => {
   
-    axios.get("https://carpool-dhfy.onrender.comsignin").then(res=>setResult(res.data)).catch(err=>console.log(err)) // it has info of user who wrote that and review
+    axios.get("https://carpool-dhfy.onrender.com/signin").then(res=>setResult(res.data)).catch(err=>console.log(err)) // it has info of user who wrote that and review
     
 }, [])
 
@@ -20,7 +20,7 @@ const handleSubmit=(e)=>{
 
     const id = JSON.parse(window.localStorage.getItem("userid"))
     
-    axios.put(`https://carpool-dhfy.onrender.com${id}`,data).then(res=>console.log(res.data)).catch(err=>console.log(err))// review added string coming as a response
+    axios.put(`https://carpool-dhfy.onrender.com/${id}`,data).then(res=>console.log(res.data)).catch(err=>console.log(err))// review added string coming as a response
 window.location.reload()
   }
 
