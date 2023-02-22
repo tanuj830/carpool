@@ -49,15 +49,6 @@ mongoose.connect(process.env.MONGO_URI,{
         app.use("/search", search_ride)
         
         
-        // ... other app.use middleware 
-        app.use(express.static(path.join(__dirname, "client", "build")))
-        
-        // ...
-        // Right before your app.listen(), add this:
-        app.get("*", (req, res) => {
-            res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-        });
-        
         
         app.listen(process.env.PORT, ()=>
         {
