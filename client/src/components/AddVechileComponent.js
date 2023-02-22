@@ -25,12 +25,12 @@ const AddVechileComponent = () => {
 
     e.preventDefault()
 
-axios.post("http://localhost:8000/addvechile",data).then(res=>setVechileID(res)).catch((err)=>console.log(err))// 1
+axios.post("https://carpool-dhfy.onrender.comaddvechile",data).then(res=>setVechileID(res)).catch((err)=>console.log(err))// 1
 // console.log(data)
 
 
 // updating vechile schema
-axios.put(`http://localhost:8000/addvechile/${vechileID.data}`, userData).then(res=>console.log(res.data)).catch(err=>console.log(err)) //2
+axios.put(`https://carpool-dhfy.onrender.comaddvechile/${vechileID.data}`, userData).then(res=>console.log(res.data)).catch(err=>console.log(err)) //2
 console.log("end")
 
 
