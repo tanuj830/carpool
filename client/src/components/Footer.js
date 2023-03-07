@@ -4,25 +4,35 @@ import {BsGithub} from 'react-icons/bs'
 import {FaCarCrash} from 'react-icons/fa'
 const Footer = () => {
   return (
-    <div className=' text-center bg-black text-white'>
-     <hr /> <div className='container mt-2 py-5 px-5 flex justify-between'>
+    <>
+    <hr/>
+    <div className=' text-center  text-slate-500 py-20 md:px-40 '>
+      <div className=' mt-2 py-5 px-5 flex justify-between'>
         <div className='flex items-center'>
          <div> 
-          <Link to="/" className=' flex items-center '><FaCarCrash /> <logo className="ml-1">Carpool</logo></Link></div>
+         <Link to="/" className=' flex items-center hover:text-color3'><FaCarCrash /> <logo className="ml-1 ">Carpool</logo></Link></div>
         </div>
         <div>
-          <Link to="/aboutus" className='text-decoration-none underline' >About</Link><br />
-          <Link to="/https://en.wikipedia.org/wiki/Carpool" className='text-decoration-none underline' >What is Carpool ?</Link>
+        <div className='mb-3'>
+            <h3 className='lead fs-6 text-slate-400 '>About</h3>
+          </div>
+          <Link to="/https://en.wikipedia.org/wiki/Carpool" className='text-decoration-none underline hover:text-color2' >What is Carpool ?</Link>
         </div>
         <div className=''>
-          <div>
-            <h3 className='lead fs-6 text-muted'>Social Link</h3>
+          <div className='mb-3'>
+            <h3 className='lead fs-6 text-slate-400 '>Social Link</h3>
           </div>
-          <a href="https://github.com/tanuj830/carpool" className='flex items-center underline'><BsGithub /><p className='ml-1'>GitHub</p></a>
+          <a href="https://github.com/tanuj830/carpool" className='flex items-center underline hover:text-color2'><BsGithub /><p className='ml-1'>GitHub</p></a>
         </div>
       </div>
-      <small className='py-2'>© 2022 Carpool</small>
+        <div className='relative'>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-80 animate-pulse bg-color1 top-0  left-5 rounded-full w-40 h-20'></div>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color2 top-0 left-28 rounded-full w-40 h-20'></div>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color3 top-12 bottom-8 left-20 rounded-full w-40 h-20'></div>
+        </div>
+      <small className='text-md'>© 2022 Carpoool.vercel.app</small>
     </div>
+    </>
   )
 }
 

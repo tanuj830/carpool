@@ -75,7 +75,6 @@ const handleChange=(e)=>{
 </div>
         </div>
         </div>
-        <hr/>
     </div>
   )
 }

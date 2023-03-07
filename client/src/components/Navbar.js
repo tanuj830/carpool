@@ -21,9 +21,9 @@ const Navbar = () => {
     <div className="px-2 md:px-20 flex items-center w-full   flex-col ">
         <div className="w-full flex justify-between items-center">
         <div className="">
-        <Link className="flex items-center text-decoration-none" to="/">
+        <Link className="text-xl hover:text-color3 flex items-center text-decoration-none" to="/">
             <div className="mx-1"><h1 className="fs-2"><FaCarCrash /></h1></div>
-            <div><h1 className="lead fs-4">Carpool</h1></div>
+            <div><h1 className="">Carpool</h1></div>
         </Link>
         </div>
         <div className="flex items-center justify-end ml-12 md:ml-16">
@@ -52,13 +52,13 @@ const Navbar = () => {
         <div className="flex items-center jutify-center mt-2">
         <div className="flex items-center justify-center">
             <Link className=" mr-3 md:mr-5 " to="/aboutus">
-        <button className=" uppercase md:text-lg text-sm">About</button>
+        <button className=" uppercase md:text-lg text-sm hover:text-color2">About</button>
         </Link>
        <Link className="  " to="/addvechile">
-        <button className=" mr-3 md:mr-5 uppercase md:text-lg text-sm">add vechile</button>
+        <button className=" mr-3 md:mr-5 uppercase md:text-lg text-sm hover:text-color2">add vechile</button>
         </Link>
        <Link className=" mr-3 md:mr-5 " to="/search">
-        <button className=" uppercase md:text-lg text-sm">Search Destination</button>
+        <button className=" uppercase md:text-lg text-sm hover:text-color2">Search Destination</button>
         </Link>
        </div>
         </div>
