@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../components/navbar.css"
 import { FaCarCrash } from "react-icons/fa";
 
 
@@ -18,8 +17,75 @@ const Navbar = () => {
 
   return (
 <>
+<div className="py-3 w-full">
+    <div className="px-2 md:px-20 flex items-center w-full   flex-col ">
+        <div className="w-full flex justify-between items-center">
+        <div className="">
+        <Link className="flex items-center text-decoration-none" to="/">
+            <div className="mx-1"><h1 className="fs-2"><FaCarCrash /></h1></div>
+            <div><h1 className="lead fs-4">Carpool</h1></div>
+        </Link>
+        </div>
+        <div className="flex items-center justify-end ml-12 md:ml-16">
+              <Link className=" mr-2" to="/settings">
+              <button className="fs-5  px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl uppercase hover:text-slate-900  hover:bg-gradient-to-r from-color1 via-color2 to-color3 rounded-md text-gray-700  ">Settings</button>
+              </Link>
+              {
+               user === "true" ? 
+               <Link
+                 to="/signin"
+                 className=" px-3 py-2 text-xs border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900  hover:bg-gradient-to-r from-color1 via-color2 to-color3 rounded-md text-slate-600   "
+               >
+               <button className="uppercase ">Sign-out</button>
+               </Link>
+             :
+             <Link
+               to="/signin"
+               className=""
+           >
+            <button className=" px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900 hover:bg-gradient-to-r from-color1 via-color2 to-color3 rounded-md text-gray-700 ">Sign-in</button>
+         </Link>
+          }
+        </div>
+        </div>
 
-<div className="navbarDiv p-2 for-mobile">
+        <div className="flex items-center jutify-center mt-2">
+        <div className="flex items-center justify-center">
+            <Link className="text-decoration-none mr-3 md:mr-5 " to="/aboutus">
+        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">About</h1>
+        </Link>
+       <Link className="text-decoration-none mr-3 md:mr-5 " to="/addvechile">
+        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">Add Vechile</h1>
+        </Link>
+       <Link className="text-decoration-none mr-3 md:mr-5 " to="/search">
+        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">Search Destination</h1>
+        </Link>
+       </div>
+       
+        </div>
+    </div>
+    <div className='relative ml-7'>
+            <div className='absolute mix-blend-multiply filter blur-xl opacity-80 animate-pulse bg-color1 -top-0  -left-4 rounded-full w-60 h-60'></div>
+            <div className='absolute mix-blend-multiply filter blur-xl opacity-30 animate-pulse bg-color2 -top-0 left-28 rounded-full w-60 h-60'></div>
+            <div className='absolute mix-blend-multiply filter blur-xl opacity-30 animate-pulse bg-color3 -top-24 -bottom-8 left-20 rounded-full w-60 h-60'></div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
+
+<div className="navbarDiv p-2 for-mobile text-blue-900">
   
 <nav className="  navbar  navbar-expand-sm object-fluid">
        <div className="container">
@@ -102,13 +168,12 @@ const Navbar = () => {
 
 
 
-<div className="navbarDiv p-2 for-pc">
+<div className="navbarDiv p-2 for-pc ">
   
-<nav className="  navbar  navbar-expand-sm object-fluid">
+<nav className="">
        <div className="container">
       
 
-        
          <button
           className="ms-auto navbar-toggler"
           data-bs-toggle="collapse"
@@ -117,7 +182,7 @@ const Navbar = () => {
            <span className="navbar-toggler-icon"></span>
         </button>
        <div
-           className=" collapse navbar-collapse d-flex justify-content-between align-items-center"
+           className="  flex justify-between items-center"
            
            id="id1"
          >
@@ -181,7 +246,7 @@ const Navbar = () => {
 
      </div>
      </nav>
-</div>
+</div>  */}
 </>
 
   );

@@ -1,7 +1,7 @@
 /// section 1: svg and 
 import React from 'react'
 import {Link} from 'react-router-dom'
-import "../components/section.css"
+// import "../components/section.css"
 import { useEffect, useState } from 'react'
 
 const Section1 = () => {
@@ -15,10 +15,10 @@ const Section1 = () => {
   },[])
 
   return (
-    <div className=''>
-        <div className=' container d-flex justify-content-center'>
-            <div className='row mt-5'>
-                <div className='col'>
+    <div className='container'>
+        <div className='  flex justify-center'>
+            <div className=' flex flex-col md:flex-row  justify-center items-center  mt-5'>
+                <div className=''>
                
 
                
@@ -26,14 +26,17 @@ const Section1 = () => {
                 </div>
                 {
                   user === "true" ? <div className='col'>
-                  <h2 className='lead fs-4'>Enjoy rides and/or add your vehicle now,</h2>
-                  <button className='button mt-2'><Link to="/search" className="text-decoration-none text-dark lead fs-6">Explore carpool</Link></button>
+                  <div className='p-3 md:p-1'>
+                  <h2 className=' text-2xl antialiased '>Enjoy rides and/or add your vehicle now,</h2>
+                  <button className='border mt-1 border-slate-400 rounded-full text-sm cursor-pointer px-3 py-1  uppercase hover:shadow-lg transition duration-300 ease-out'><Link to="/search" className='antialiased ' >Explore</Link></button>
+                  </div>
                   </div> 
                   : <div className='col'>
                   <h2>Enjoy rides and/or add your vehicle now,</h2>
                   <button className='button mt-2'><Link to="/signin" className="text-decoration-none text-dark">Explore carpool now</Link></button>
                   </div> 
                 }
+                     
             </div>
         </div>
           {/* svg */}

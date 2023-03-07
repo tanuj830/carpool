@@ -11,7 +11,7 @@ import Signin from "./pages/Signin";
 import {useEffect} from "react"
 import {useState} from "react"
 import GetDetails from "./components/GetDetails";
-
+// import '../src/index.css'
 
 function App() {
   const [user, setUser] = useState();

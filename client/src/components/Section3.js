@@ -6,11 +6,15 @@ import { useEffect } from 'react'
 const Section3 = () => {
 
     return (
-        <div className='container p-5 my-5' style={{backgroundColor:"#F8F8F8", borderRadius:5}}>
+        <div className=' p-5 my-5 bg-gradient-to-r from-color1 via-color2 to-color3' >
 
 <div className='row mb-5'>
 <div className='col text-center'>
 <h3 className='my-3 lead' style={{fontWeight:500}}>Why Carpool ?</h3>
+
+
+
+
 </div>
 </div>
             <div className='row'>

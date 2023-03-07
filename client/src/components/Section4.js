@@ -32,16 +32,16 @@ const handleChange=(e)=>{
 }
 // console.log(Result)
   return (
-    <div className='container-fluid' style={{marginBottom:30}}>
+    <div className='container px-3 md:px-10' style={{marginBottom:30}}>
   
         <div className='my-5'>
         <div className='row'>
 <div className='text-center'>
-<p className='text-muted lead'>WHAT PEOPLE SAY ABOUT US!</p>
+<p className='text-2xl font-bold'>WHAT PEOPLE SAY ABOUT US!</p>
 
 </div>
 
-<div className='row  mx-auto'style={{}}>
+<div className='grid md:grid-cols-3 mt-7 sm:grid-cols-1 gap-4 'style={{}}>
 {
     Result.map(i => {
       if(i.customerReview === "false")
@@ -51,12 +51,12 @@ const handleChange=(e)=>{
       }
       else{
         
-     return( <div className='col-md-4 col-sm-12 mt-2'>
-      <div className="card" >
-    <div className='text-center mt-3 '>  <img src={i.file} className="card-img-top img-fluid w-25" style={{borderRadius:100, height:"auto"}} alt="..."/></div>
+     return( <div className='font-slate-400 text-lg'>
+      <div className="py-4 rounded-xl card bg-gradient-to-r from-color1 via-color2 to-color3" >
+    <div className='flex justify-center items-center mt-3 '>  <img src={i.file} className="rounded-full w-24 object-cover" style={{borderRadius:100}} alt="..."/></div>
       <div className="card-body">
-        <h6 className="text-capitalize text-muted card-title text-center lead" style={{ fontWeight:500}}>{i.name}</h6>
-        <p className="card-text mt-4 text-muted lead" style={{fontSize:14, fontWeight:400}}>{i.customerReview}</p>
+        <h6 className="uppercase mt-3 font-bold text-center " style={{ fontWeight:500}}>{i.name}</h6>
+        <p className="text-center mt-4 px-4 text-muted" style={{ fontWeight:400}}>{i.customerReview}</p>
       </div>
     </div>
   </div>)
