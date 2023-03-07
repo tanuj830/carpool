@@ -52,7 +52,7 @@ const handleChange=(e)=>{
       else{
         
      return( <div className='font-slate-400 text-lg'>
-      <div className="py-4 rounded-xl card bg-gradient-to-r from-color1 via-color2 to-color3" >
+      <div className="py-4 rounded-xl bg-slate-100 transition duration-1000 hover:shadow-2xl" >
     <div className='flex justify-center items-center mt-3 '>  <img src={i.file} className="rounded-full w-24 object-cover" style={{borderRadius:100}} alt="..."/></div>
       <div className="card-body">
         <h6 className="uppercase mt-3 font-bold text-center " style={{ fontWeight:500}}>{i.name}</h6>
