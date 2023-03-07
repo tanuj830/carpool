@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section2 = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 px-2 md:px-40 text-xl' style={{marginTop:15}}>
+    <div className='grid grid-cols-1 md:grid-cols-2 px-2 md:px-40 text-xl text-slate-600' style={{marginTop:15}}>
 
       <div className=''>
 <div className='col-md-6 col-sm-12 mt-5'>

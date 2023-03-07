@@ -28,13 +28,13 @@ const Section1 = () => {
                 {
                   user === "true" ? <div className='col'>
                   <div className='p-3 md:p-1'>
-                  <h2 className=' text-3xl antialiased '>Enjoy rides and/or add your vehicle now,</h2>
-                  <button className='border mt-2 border-slate-400 rounded-full text-sm cursor-pointer px-5 py-2   uppercase hover:shadow-lg transition duration-300 ease-out'><Link to="/search" className='antialiased ' >Explore</Link></button>
+                  <h2 className=' text-3xl antialiased  text-slate-600'>Enjoy rides and/or add your vehicle now,</h2>
+                  <button className='border mt-2 border-slate-400 rounded-full text-sm cursor-pointer px-5 py-2   uppercase hover:shadow-xl hover:bg-slate-100 transition duration-300 ease-out'><Link to="/search" className='antialiased ' >Explore</Link></button>
                   </div>
                   </div> 
                   : <div className='col'>
-                  <h2 className=' text-3xl antialiased'>Enjoy rides and/or add your vehicle now,</h2>
-                  <button className='border mt-2 border-slate-400 rounded-full text-sm cursor-pointer px-5 py-2   uppercase hover:shadow-lg transition duration-300 ease-out'><Link to="/signin" className="text-decoration-none text-dark">Explore carpool now</Link></button>
+                  <h2 className=' text-3xl antialiased text-slate-6'>Enjoy rides and/or add your vehicle now,</h2>
+                  <button className='border mt-2 border-slate-400 rounded-full text-sm cursor-pointer px-5 py-2   uppercase hover:shadow-xl hover:bg-slate-100 transition duration-300 ease-out'><Link to="/signin" className="text-decoration-none text-dark">Explore carpool now</Link></button>
                   </div> 
                 }
                      
