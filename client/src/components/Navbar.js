@@ -51,24 +51,24 @@ const Navbar = () => {
 
         <div className="flex items-center jutify-center mt-2">
         <div className="flex items-center justify-center">
-            <Link className="text-decoration-none mr-3 md:mr-5 " to="/aboutus">
-        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">About</h1>
+            <Link className=" mr-3 md:mr-5 " to="/aboutus">
+        <button className=" uppercase md:text-lg text-sm">About</button>
         </Link>
-       <Link className="text-decoration-none mr-3 md:mr-5 " to="/addvechile">
-        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">Add Vechile</h1>
+       <Link className="  " to="/addvechile">
+        <button className=" mr-3 md:mr-5 uppercase md:text-lg text-sm">add vechile</button>
         </Link>
-       <Link className="text-decoration-none mr-3 md:mr-5 " to="/search">
-        <h1 className="lead fs-5 font-normal uppercase md:text-lg text-xs">Search Destination</h1>
+       <Link className=" mr-3 md:mr-5 " to="/search">
+        <button className=" uppercase md:text-lg text-sm">Search Destination</button>
         </Link>
        </div>
-       
         </div>
     </div>
-    <div className='relative ml-7'>
-            <div className='absolute mix-blend-multiply filter blur-xl opacity-80 animate-pulse bg-color1 -top-0  -left-4 rounded-full w-60 h-60'></div>
-            <div className='absolute mix-blend-multiply filter blur-xl opacity-30 animate-pulse bg-color2 -top-0 left-28 rounded-full w-60 h-60'></div>
-            <div className='absolute mix-blend-multiply filter blur-xl opacity-30 animate-pulse bg-color3 -top-24 -bottom-8 left-20 rounded-full w-60 h-60'></div>
+       <div className='relative'>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-80 animate-pulse bg-color1 top-0  left-5 rounded-full w-20 h-20'></div>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color2 top-0 left-28 rounded-full w-20 h-20'></div>
+            <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color3 top-12 bottom-8 left-20 rounded-full w-20 h-20'></div>
         </div>
+   
 </div>
 
 
