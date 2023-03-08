@@ -48,7 +48,7 @@ useEffect(() => {
 <>
 <div className="mt-5">
 <div className="flex items-center mt-6  md:mt-40 justify-center">
-  <div className="p-5 shadow-xl" style={{ borderRadius: 10 }}>
+  <div className="md:px-20 px-14 py-6 shadow-xl" style={{ borderRadius: 10 }}>
     <div className="text-center">
       <h1>
         <b>Log-in</b>
@@ -58,25 +58,28 @@ useEffect(() => {
     {
       wrongCredentials==="false" && wrongCredentialsUtil === "true" ? <h1 className='lead text-danger'>Wrong credentials</h1>:null
     }
-    <form action="post" onSubmit={handleSubmit}>
-            <div className='flex'>
-                
-                <input className='border-l-pink-400' type="email" autoComplete='off' name='email' onChange={handleChange} placeholder='E-mail' />
-                <input className='border-xl border-slate-900' type="password" autoComplete='off' name='password' onChange={handleChange} placeholder='Password' />
-                <button className='btn btn-primary'> Submit </button>
+    <form action="post" className='mt-7' onSubmit={handleSubmit}>
+            <div className='flex justify-center flex-col'>
+                <div>
+                <input className=' border-b border-slate-900 px-4 py-1 mt-4' type="email" autoComplete='off' name='email' onChange={handleChange} placeholder='E-mail' />
+                </div>
+                <div>
+                <input className='border-b border-slate-900 px-4 py-1 mt-4' type="password" autoComplete='off' name='password' onChange={handleChange} placeholder='Password' />
+                </div>
+                <button className='border rounded-sm mt-4 border-slate-800'> Submit </button>
             </div>
-               <div>
-               <Link to="/signin/register">create account </Link>
+               <div className='text-center'>
+               <Link to="/signin/register" className='text-blue-700 text-xs'>create account </Link>
                </div>
         </form>
   </div>
 </div>
 </div>
-      {/* <div className='relative '>
+      <div className='relative '>
           <div className='absolute mix-blend-multiply filter blur-lg opacity-80 animate-pulse bg-color1 top-0  left-5 rounded-full w-60 h-40'></div>
             <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color2 top-0 left-28 rounded-full w-60 h-40'></div>
             <div className='absolute mix-blend-multiply filter blur-lg opacity-30 animate-pulse bg-color3 top-12 bottom-8 left-20 rounded-full w-60 h-40'></div>
-        </div> */}
+        </div>
         </>
   )
 }
