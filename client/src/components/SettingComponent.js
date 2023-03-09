@@ -36,7 +36,7 @@ useEffect(() => {
 
 
 const handleSubmit = (file) =>{
-  // e.preventDefault()
+  e.preventDefault()
   
   const storageRef = ref(storage, `files/${file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file);
@@ -58,6 +58,10 @@ const handleSubmit = (file) =>{
   );
 const id = JSON.parse(window.localStorage.getItem("userid"))
     axios.put(`https://carpool-dhfy.onrender.com/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
+    
+    setTimeout(() => {
+      window.location.reload()
+    }, 2500);
 }
 
 
