@@ -28,10 +28,10 @@ useEffect(() => {
 
 }, [])
 
-useEffect(() => {
+// useEffect(() => {
   
-  handleSubmit(file)
-}, [file])
+//   handleSubmit(file)
+// }, [file])
 
 
 
