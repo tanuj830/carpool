@@ -36,7 +36,7 @@ useEffect(() => {
 
 
 const handleSubmit = (file) =>{
-  e.preventDefault()
+  // .preventDefault()
   
   const storageRef = ref(storage, `files/${file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file);
