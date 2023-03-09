@@ -11,7 +11,6 @@ const SettingComponent = () => {
   const [i, setI] = React.useState()
 
   const [progresspercent, setProgresspercent] = React.useState(0);
-  const [file, setFile] = React.useState({})
   const [imgUrl, setImgUrl] = React.useState({})
 
 
@@ -65,9 +64,9 @@ const handleSubmit= (e)=>{
   const id = JSON.parse(window.localStorage.getItem("userid"))
   axios.put(`https://carpool-dhfy.onrender.com/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
   
-  setTimeout(() => {
-    window.location.reload()
-  }, 2500);
+  // setTimeout(() => {
+  //   window.location.reload()
+  // }, 2500);
 }
   
   
