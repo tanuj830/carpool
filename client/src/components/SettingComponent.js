@@ -35,9 +35,7 @@ useEffect(() => {
 
 
 
-const handleSubmit = (e) =>{
-  e.preventDefault()
-  const file = e.target.files[0];
+const handleChange = (file) =>{
 
   const storageRef = ref(storage, `files/${file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file);
@@ -57,15 +55,22 @@ const handleSubmit = (e) =>{
       });
     }
   );
-const id = JSON.parse(window.localStorage.getItem("userid"))
-    axios.put(`https://carpool-dhfy.onrender.com/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
-    
-    // setTimeout(() => {
-    //   window.location.reload()
-    // }, 2500);
 }
 
 
+const handleSubmit= (e)=>{
+
+  e.preventDefault()
+
+  const id = JSON.parse(window.localStorage.getItem("userid"))
+  axios.put(`https://carpool-dhfy.onrender.com/settings/${id}`, imgUrl).then(res=>console.log(res.data)).catch(err=>console.log(err))
+  
+  setTimeout(() => {
+    window.location.reload()
+  }, 2500);
+}
+  
+  
   return (
     <div className='container py-5  justify-content-between'>
       
@@ -85,9 +90,9 @@ const id = JSON.parse(window.localStorage.getItem("userid"))
 
     </div>
 <form action='post'  onSubmit={handleSubmit} >
-<input name="file" onChange={e=>setFile(e)} type="file" />
+<input name="file" onChange={e=>handleChange( e.target.files[0])} type="file" />
 <div>
-<button className='mt-2 btn btn-outline-primary lead'>upload</button>
+<button className='mt-2 btn btn-outline-primary lead' >upload</button>
 </div> 
   </form>     
       </div>
