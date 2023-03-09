@@ -24,7 +24,7 @@ const handleSubmit=(e)=>{
 
     setTimeout(() => {
       window.location.reload()
-    }, 10000);
+    }, 3000);
   }
 
 const handleChange=(e)=>{
