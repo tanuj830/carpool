@@ -49,24 +49,24 @@ useEffect(() => {
 <div className="mt-5">
 <div className="flex items-center mt-6  md:mt-40 justify-center">
   <div className="md:px-20 px-14 py-6 shadow-xl" style={{ borderRadius: 10 }}>
-    <div className="text-center">
+    <div className="text-center mb-2">
       <h1>
-        <b>Log-in</b>
+        <h1 className='uppercase'>Log-in</h1>
       </h1>
       <hr />
     </div>
     {
-      wrongCredentials==="false" && wrongCredentialsUtil === "true" ? <h1 className='lead text-danger'>Wrong credentials</h1>:null
+      wrongCredentials==="false" && wrongCredentialsUtil === "true" ? <h1 className='lead text-red-700'>Wrong credentials</h1>:null
     }
-    <form action="post" className='mt-7' onSubmit={handleSubmit}>
+    <form action="post" className='mt-4' onSubmit={handleSubmit}>
             <div className='flex justify-center flex-col'>
                 <div>
-                <input className=' border-b border-slate-900 px-4 py-1 mt-4' type="email" autoComplete='off' name='email' onChange={handleChange} placeholder='E-mail' />
+                <input className=' border-b border-slate-300 px-4 py-1 mt-4 hover:border-slate-900' type="email" autoComplete='off' name='email' onChange={handleChange} placeholder='E-mail' />
                 </div>
                 <div>
-                <input className='border-b border-slate-900 px-4 py-1 mt-4' type="password" autoComplete='off' name='password' onChange={handleChange} placeholder='Password' />
+                <input className='border-b border-slate-300 px-4 py-1 mt-4 hover:border-slate-900' type="password" autoComplete='off' name='password' onChange={handleChange} placeholder='Password' />
                 </div>
-                <button className='border rounded-sm mt-4 border-slate-800'> Submit </button>
+                <button className='border rounded-sm mt-4 border-slate-800 uppercase'> Submit </button>
             </div>
                <div className='text-center'>
                <Link to="/signin/register" className='text-blue-700 text-xs'>create account </Link>
