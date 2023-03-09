@@ -35,9 +35,10 @@ useEffect(() => {
 
 
 
-const handleSubmit = (file) =>{
-  // .preventDefault()
-  
+const handleSubmit = (e) =>{
+  e.preventDefault()
+  const file = e.target.files[0];
+
   const storageRef = ref(storage, `files/${file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file);
   
@@ -84,7 +85,7 @@ const id = JSON.parse(window.localStorage.getItem("userid"))
 
     </div>
 <form action='post'  onSubmit={handleSubmit} >
-<input name="file" onChange={e=>setFile(e.target.files[0])} type="file" />
+<input name="file" onChange={e=>setFile(e)} type="file" />
 <div>
 <button className='mt-2 btn btn-outline-primary lead'>upload</button>
 </div> 
