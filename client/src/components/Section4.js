@@ -21,7 +21,10 @@ const handleSubmit=(e)=>{
     const id = JSON.parse(window.localStorage.getItem("userid"))
     
     axios.put(`https://carpool-dhfy.onrender.com/${id}`,data).then(res=>console.log(res.data)).catch(err=>console.log(err))// review added string coming as a response
-// window.location.reload()
+
+    setTimeout(() => {
+      window.location.reload()
+    }, 10000);
   }
 
 const handleChange=(e)=>{
