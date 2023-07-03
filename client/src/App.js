@@ -21,7 +21,7 @@ function App() {
     const userLogin = window.localStorage.getItem("isLogin")
     setUser(JSON.parse(userLogin))  
     
-  },[]) 
+  }) 
     
   // const navigate = useNavigate()
   window.onload = function() {
@@ -32,15 +32,15 @@ function App() {
   }
   
   return (
-    <div className="App">
+    <div className="App bg-black">
      <Router>
       <Routes>
         <Route path="/" exact element={<Home/>} />
         <Route path="/feed" element={<Feed/>} />
-        {user === "true"? <Route path="/addvechile" element={<AddVechile/>} /> : null }
-        {user === "true" ? <Route path="/search"  element={<WantRide/>} /> : null}
-        {user === "true" ? <Route path="/search/details/:id" element={<GetDetails/>} /> : null}
-        {user === "true" ? <Route path="/settings" element={<Settings/>} /> : null}
+        {user === true? <Route path="/addvechile" element={<AddVechile/>} /> : null }
+        {user === true ? <Route path="/search"  element={<WantRide/>} /> : null}
+        {user === true ? <Route path="/search/details/:id" element={<GetDetails/>} /> : null}
+        {user === true ? <Route path="/settings" element={<Settings/>} /> : null}
         <Route path="/signin" element={<Signin/>} />
         <Route path="/signin/register" element={<Register/>} />
         

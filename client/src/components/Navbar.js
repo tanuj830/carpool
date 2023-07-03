@@ -17,24 +17,24 @@ const Navbar = () => {
 
   return (
 <>
-<div className="py-3 w-full">
-    <div className="px-2 md:px-20 flex items-center w-full   flex-col ">
+<div className="py-3 w-full text-white">
+    <div className="px-2 md:px-20 flex items-center w-full    flex-col ">
         <div className="w-full flex justify-between items-center">
         <div className="">
-        <Link className="text-xl hover:text-slate-400 flex items-center text-decoration-none" to="/">
+        <Link className="text-xl hover:text-slate-50 flex items-center text-decoration-none" to="/">
             <div className="mx-1"><h1 className="fs-2"><FaCarCrash /></h1></div>
             <div><h1 className="">Carpool</h1></div>
         </Link>
         </div>
         <div className="flex items-center justify-end ml-12 md:ml-16">
               <Link className=" mr-2" to="/settings">
-              <button className="fs-5  px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl uppercase hover:text-slate-900  hover:bg-slate-100 rounded-md text-gray-700  ">Settings</button>
+              <button className="fs-5  px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl uppercase hover:text-slate-900  hover:bg-slate-100 rounded-md text-white  ">Settings</button>
               </Link>
               {
-               user === "true" ? 
+               user === true ? 
                <Link
                  to="/signin"
-                 className=" px-3 py-2 text-xs border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900  hover:bg-slate-100 text-slate-600   "
+                 className=" px-3 py-2 text-xs border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900  hover:bg-slate-100 text-white  rounded-md "
                >
                <button className="uppercase ">Sign-out</button>
                </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
                to="/signin"
                className=""
            >
-            <button className=" px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900 hover:bg-slate-100 text-gray-700 ">Sign-in</button>
+            <button className=" px-3 py-2 text-xs  border border-slate-500 transition duration-500 ease-in-out hover:shadow-xl hover:text-slate-900 hover:bg-slate-100 text-white rounded-md">Sign-in</button>
          </Link>
           }
         </div>

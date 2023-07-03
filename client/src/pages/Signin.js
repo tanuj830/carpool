@@ -15,23 +15,27 @@ const Signin = () => {
         e.preventDefault();
         axios.post("https://carpool-dhfy.onrender.com/signin",userInfo).then(res=> setResult(res.data)).catch(err=>(console.log(err)))
         setwrongCredentialsUtil("true")
+        
+      }
+      const navigate = useNavigate()
+      useEffect(() => {
+        console.log(result.userexist)
+        if(result.userexist)
+        window.localStorage.setItem("userid",result.userexist._id)
+        
+        window.localStorage.setItem("token",result.token)
 
-}
-const navigate = useNavigate()
-useEffect(() => {
-        console.log(result._id)
-        window.localStorage.setItem("userid",JSON.stringify(result._id))
 
         // if user exist then do this, vice versa
-        if(result._id)
+        if(result.userexist && result.userexist._id)
         {
-            const t = "true";
-            window.localStorage.setItem("isLogin",JSON.stringify(t))
+            // const t = "true";
+            window.localStorage.setItem("isLogin",true)
             navigate("/");
         }
         else{
-            const f = "false"
-            window.localStorage.setItem("isLogin",JSON.stringify(f))
+            // const f = "false"
+            window.localStorage.setItem("isLogin",false)
 
         }
     }, [result])
