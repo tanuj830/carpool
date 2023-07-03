@@ -54,7 +54,13 @@ const handleChange=(e)=>{
       }
       else{
         
-     return( <div className='text-slate-500 text-lg'>
+     return( <div className='text-white mt-10'>
+      <div className='flex '>
+      {/* <img src="https://img.freepik.com/premium-photo/generic-brandless-modern-sport-car-with-fire-smoke_110488-1759.jpg?size=626&ext=jpg&ga=GA1.1.1739072392.1687083813&semt=ais"/> */}
+      <img src="https://img.freepik.com/free-photo/silhouette-black-sports-car-with-headlights-black-background_181624-58524.jpg?size=626&ext=jpg&ga=GA1.1.1739072392.1687083813&semt=ais"/>
+      <img src="https://img.freepik.com/premium-photo/front-view-generic-brandless-moder-car_110488-502.jpg?size=626&ext=jpg&ga=GA1.1.1739072392.1687083813&semt=ais"/>
+      </div>
+
       <div className="py-4 rounded-xl bg-slate-100 transition duration-1000 hover:shadow-2xl" >
     <div className='flex justify-center items-center mt-3 '>  <img src={i.file} className="rounded-full w-24 object-cover" style={{borderRadius:100}} alt="..."/></div>
       <div className="card-body">
