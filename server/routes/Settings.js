@@ -34,7 +34,7 @@ router.get("/data",async(req,res)=>{
     router.put("/:id", async(req,res)=>{
 
       try{
-        await UserSchema.findByIdAndUpdate(req.params.id,{customerReview: req.body.customerReview},function(data, err){
+        await UserSchema.findByIdAndUpdate(req.params.id,{file: req.body.file},function(data, err){
 
             if(err)
             res.send(err)

@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const UserSchema = require("../models/UserModel")
-
+const jwt = require("jsonwebtoken")
 // Validating user
 router.post("/signin",async(req,res)=>{
 
@@ -14,8 +14,16 @@ router.post("/signin",async(req,res)=>{
             res.send("fill right credentials")
         }
         else{
-            // console.log(userexist)
-            res.send(userexist)
+            // console.log(userexist) step 1
+            const token = jwt.sign({
+                "userData":{
+                    id: userexist._id,
+                    name: userexist.name
+                }
+            },
+            "seckey",
+            {expiresIn: "1d"})
+            res.json({token, userexist})
         }
     }catch(err){console.log("err")}
     })

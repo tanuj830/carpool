@@ -18,12 +18,12 @@ const Section1 = () => {
   return (
     <div className='md:px-40 px-5 text-white'>
       
-        <div className='flex justify-center flex-col-reverse md:flex-row items-center'>
+        <div className='flex justify-center flex-col-reverse lg:flex-row items-center'>
             <div className='w-full'>
-              <h1 className='text-[15px] md:text-[30px] xl:text-[50px] text-white text-justify'>Enjoy rides and/or add your vehicle now</h1>
-              <p className='text-[7px] md:text-[10px] xl:text-[18px]  text-slate-400 text-justify pt-2'>Carpooling is the sharing of car journeys so that more than one person travels in a car, and prevents the need for others to have to drive to a location themselves. </p>
+              <h1 className='text-[20px] md:text-[42px] xl:text-[50px] text-white text-justify'>Enjoy rides and/or add your vehicle now</h1>
+              <p className='text-[13px] md:text-[20px] xl:text-[18px]  text-slate-400 text-justify pt-2'>Carpooling is the sharing of car journeys so that more than one person travels in a car, and prevents the need for others to have to drive to a location themselves. </p>
             </div>
-            <div className='md:p-20  w-[90%]' style={{background:"url(https://pngtree.com/freepng/blue-curve-line-element_5342001.html)", backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
+            <div className='md:p-20  lg:w-[90%]' style={{background:"url(https://pngtree.com/freepng/blue-curve-line-element_5342001.html)", backgroundRepeat:"no-repeat", backgroundSize:"cover", }}>
               <img className='' src="https://img.freepik.com/premium-photo/front-view-generic-brandless-modern-car_110488-532.jpg?size=626&ext=jpg&ga=GA1.1.1739072392.1687083813&semt=ais" alt="" />
             </div>
         </div>
